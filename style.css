@@ -1,110 +1,188 @@
 :root {
-    --primary-color: #E60023;
-    --secondary-color: #111827;
-    --accent-color: #0088cc;
-    --highlight-color: #ff5722;
-    --background-color: #f5f7fa;
+  /* Color Palette */
+  --primary: #E60023;
+  --primary-dark: #d4001f;
+  --secondary: #111827;
+  --accent: #0088cc;
+  --highlight: #ff5722;
+  --background: #f5f7fa;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  
+  /* Typography */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Cal Sans', 'Inter', sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset & Base Styles */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: var(--background-color);
-    line-height: 1.6;
+  font-family: var(--font-primary);
+  background: var(--background);
+  line-height: 1.6;
+  color: var(--secondary);
+  overflow-x: hidden;
 }
 
+/* Typography */
 .gradient-text {
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
+/* Hero Section */
 .hero-section {
-    text-align: center;
-    padding-top: 120px;
-    padding-bottom: 80px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png') center center/cover;
-    color: white;
+  position: relative;
+  text-align: center;
+  padding: 8rem 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url('assets/welcome.png') center/cover;
+  color: white;
+  isolation: isolate;
 }
 
-.hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: -1;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
+/* Buttons */
 .cta-button {
-    padding: 12px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
+  padding: 0.875rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
 }
 
 .cta-button:hover {
-    background-color: var(--highlight-color);
-    transform: translateY(-5px);
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
-.loading {
-    display: none;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid var(--primary-color);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
+/* Features */
 .feature {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: 0.3s;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-    transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
+.feature:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Loading Animation */
+.loading {
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer */
 footer {
-    background-color: #111827;
-    color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: var(--secondary);
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
 footer a {
-    color: #0088cc;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 footer a:hover {
-    color: #ff5722;
+  color: var(--highlight);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 6rem 1rem;
+  }
+  
+  .feature {
+    margin: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hidden {
+  display: none;
 }
