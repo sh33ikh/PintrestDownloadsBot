@@ -1,4 +1,4 @@
 python-telegram-bot==13.7
-aiohttp==3.8.1
-cachetools==4.2.4
-python-dotenv==0.19.2
+aiohttp
+cachetools
+python-dotenv
