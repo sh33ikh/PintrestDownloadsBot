@@ -1,0 +1,25 @@
+# Fly.io Configuration for PintrestDownloadsBot
+app = "PintrestDownloadsBot"  # Application name
+primary_region = "iad"  # Set this to your preferred region (e.g., iad, fra, etc.)
+
+[build]
+  builder = "paketo-buildpacks/builder:base"  # Python-compatible builder
+
+[deploy]
+  release_command = "python3 main.py"  # Ensure this matches your bot's main script
+
+[[services]]
+  internal_port = 8080  # Default port for Python HTTP servers
+  protocol = "tcp"
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+
+  [[services.ports]]
+    handlers = ["http"]  # Expose the bot as an HTTP service
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]  # Enable HTTPS (TLS)
+    port = 443
