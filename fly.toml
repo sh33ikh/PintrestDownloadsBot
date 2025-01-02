@@ -1,4 +1,4 @@
-app = "pinterest-downloader-bot"
+app = "pintrestdownloadsbot"
 primary_region = "sin"  # Singapore region, you can change this
 
 [build]
