@@ -1,23 +1,12 @@
 import logging
 import aiohttp
+import os
 from datetime import datetime
-from telegram import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Update,
-    ParseMode,
-    ChatAction
-)
-from telegram.ext import (
-    Updater,
-    CallbackQueryHandler,
-    CommandHandler,
-    MessageHandler,
-    Filters,
-    CallbackContext,
-)
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode, ChatAction
+from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, MessageHandler, Filters, CallbackContext
 from urllib.parse import quote
 from cachetools import TTLCache
+from dotenv import load_dotenv
 
 # Configure logging
 logging.basicConfig(
@@ -29,6 +18,7 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
 # Load environment variables
 load_dotenv()
 
@@ -59,7 +49,7 @@ async def fetch_content(url: str) -> dict:
         logger.error(f"API Error: {e}")
     return None
 
-def get_stats_keyboard():
+def get_stats_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup([
         [
             InlineKeyboardButton("📊 Bot Stats", callback_data="stats"),
@@ -83,7 +73,7 @@ def start(update: Update, context: CallbackContext) -> None:
         f"📢  {user.first_name}, Join {CHANNEL_USERNAME} for updates!\n\n"
         "Send Pinterest URLs to begin! 🎯"
     )
-    
+
     context.bot.send_chat_action(update.effective_chat.id, ChatAction.TYPING)
     update.message.reply_animation(
         animation="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
@@ -103,7 +93,7 @@ def is_member(user_id: int, context: CallbackContext) -> bool:
 def handle_message(update: Update, context: CallbackContext) -> None:
     user_id = update.effective_user.id
     message = update.message.text.strip()
-    
+
     if not is_member(user_id, context):
         update.message.reply_text(
             f"❌ Please join {CHANNEL_USERNAME} to use this bot!",
@@ -121,10 +111,10 @@ def handle_message(update: Update, context: CallbackContext) -> None:
         return
 
     status_msg = update.message.reply_text("⚡️ Processing your request...")
-    
+
     try:
         response = context.dispatcher.run_async(fetch_content, message).result()
-        
+
         if not response or "data" not in response:
             status_msg.edit_text("❌ Failed to fetch content! Please try again.")
             return
@@ -132,7 +122,7 @@ def handle_message(update: Update, context: CallbackContext) -> None:
         # Update statistics
         if user_id not in download_stats:
             download_stats[user_id] = {"downloads": 0, "last_download": None}
-        
+
         download_stats[user_id]["downloads"] += 1
         download_stats[user_id]["last_download"] = datetime.now()
 
@@ -172,9 +162,9 @@ def handle_message(update: Update, context: CallbackContext) -> None:
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=response_keyboard
             )
-        
+
         status_msg.delete()
-    
+
     except Exception as e:
         logger.error(f"Error processing request: {e}")
         status_msg.edit_text(
