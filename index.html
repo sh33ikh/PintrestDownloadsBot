@@ -4,107 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type='text/javascript' src='//pl25457981.profitablecpmrate.com/07/12/70/07127081935f2e2523daf7376c624602.js'></script>
 
-    <!-- Primary Meta Tags -->
-    <title>Pinterest Downloads Bot - High Quality Pinterest Media Downloader</title>
-    <meta name="title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
-    <meta name="description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot or web interface.">
-    <meta name="keywords" content="Pinterest downloader, Pinterest video downloader, Pinterest image downloader, Pinterest save, Pinterest HD download, Telegram bot">
+    <!-- SEO Meta Tags -->
+    <title>Pinterest Downloads Bot - #1 HD Pinterest Media Downloader</title>
+    <meta name="title" content="Pinterest Downloads Bot - Best Pinterest Media Downloader">
+    <meta name="description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot. Support for 4K videos and original quality images.">
+    <meta name="keywords" content="Pinterest downloader, Pinterest video downloader, Pinterest HD download, Pinterest image saver, Pinterest media, Telegram bot">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="RektDevelopers">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pintrest-downloads-bot.vercel.app/">
-    <meta property="og:title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
+    <meta property="og:title" content="Pinterest Downloads Bot - Best Pinterest Media Downloader">
     <meta property="og:description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads.">
     <meta property="og:image" content="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
+    <meta property="og:site_name" content="Pinterest Downloads Bot">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://pintrest-downloads-bot.vercel.app/">
-    <meta name="twitter:title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
+    <meta name="twitter:title" content="Pinterest Downloads Bot - Best Pinterest Media Downloader">
     <meta name="twitter:description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
 
+    <!-- Preload Critical Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" href="assets/welcome.png" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preload" as="image" href="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
-    <!-- External CSS -->
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Deferred CSS Loading -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXUvCw5P3y3xQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="animate-fade-in">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/favicon-32x32.png" alt="Logo" class="w-8 h-8">
+                <span class="font-bold text-xl">Pinterest Bot</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://t.me/PintrestDownloadsBot" class="nav-link">
+                    <i class="fab fa-telegram"></i>
+                    <span>Try Bot</span>
+                </a>
+                <a href="https://t.me/+qmQRKWhcIM81NjQ1" class="nav-link">
+                    <i class="fas fa-headset"></i>
+                    <span>Support</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
-    <section class="hero-section">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-            Download Pinterest Media <span class="gradient-text">Instantly</span>
-        </h1>
-        <p class="text-xl mb-8">High-quality Pinterest video and image downloader - Free & Fast</p>
-        <button class="cta-button" onclick="handleDownload()">Start Downloading</button>
+    <section class="hero-section mt-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Download Pinterest Media <span class="gradient-text">Instantly</span>
+            </h1>
+            <p class="text-xl mb-8">High-quality Pinterest video and image downloader - Free & Fast</p>
+            <div class="flex flex-col items-center gap-4 max-w-xl mx-auto">
+                <input type="text" id="pinterest-url" 
+                       class="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                       placeholder="Paste Pinterest URL here...">
+                <button class="cta-button group" onclick="handleDownload()">
+                    <span>Start Download</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    <div id="loading-spinner" class="loading ml-2"></div>
+                </button>
+            </div>
+            <div id="download-result" class="mt-6 hidden max-w-xl mx-auto"></div>
+        </div>
     </section>
 
     <!-- Features Section -->
-    <section class="container mx-auto grid md:grid-cols-3 gap-8 py-16">
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-video"></i>
+    <section class="container mx-auto px-4 py-24">
+        <h2 class="text-3xl font-bold text-center mb-16">Why Choose Our Downloader?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4">4K Video Downloads</h3>
+                <p class="text-gray-600">Download Pinterest videos in ultra-high quality resolution.</p>
             </div>
-            <h3 class="font-bold text-xl mb-4">HD Video Downloads</h3>
-            <p class="text-gray-600">Download Pinterest videos in the highest quality available.</p>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4">Original Quality Images</h3>
+                <p class="text-gray-600">Save Pinterest images in their highest resolution.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-4">Lightning Fast</h3>
+                <p class="text-gray-600">Optimized servers ensure rapid download speeds.</p>
+            </div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-images"></i>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="bg-gradient-to-br from-primary/5 to-accent/5 py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-card">
+                    <h4 class="text-4xl font-bold text-primary">50K+</h4>
+                    <p class="text-gray-600">Daily Users</p>
+                </div>
+                <div class="stat-card">
+                    <h4 class="text-4xl font-bold text-primary">99.9%</h4>
+                    <p class="text-gray-600">Success Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h4 class="text-4xl font-bold text-primary">4K</h4>
+                    <p class="text-gray-600">Max Quality</p>
+                </div>
+                <div class="stat-card">
+                    <h4 class="text-4xl font-bold text-primary">24/7</h4>
+                    <p class="text-gray-600">Support</p>
+                </div>
             </div>
-            <h3 class="font-bold text-xl mb-4">Image Downloads</h3>
-            <p class="text-gray-600">Save Pinterest images in their original resolution.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">
-                <i class="fas fa-bolt"></i>
-            </div>
-            <h3 class="font-bold text-xl mb-4">Fast Processing</h3>
-            <p class="text-gray-600">Lightning-fast downloads with optimized servers.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>Made with <i class="fas fa-heart text-[#E60023]"></i> by <a href="https://t.me/RektDevelopers">RektDevelopers</a></p>
-        <div class="flex justify-center space-x-6">
-            <a href="https://t.me/PintrestDownloadsBot" class="text-[#0088cc] hover:text-[#0077b5]">
-                <i class="fab fa-telegram fa-2x"></i> <!-- Added alt attribute for accessibility -->
-            </a>
-            <a href="https://github.com/sh33ikh/PintrestDownloadsBot" class="text-gray-800 hover:text-gray-600">
-                <i class="fab fa-github fa-2x"></i> <!-- Added alt attribute for accessibility -->
-            </a>
+    <footer class="bg-secondary text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold mb-4">About Us</h4>
+                    <p class="text-gray-300">Pinterest Downloads Bot is your go-to solution for downloading Pinterest media in the highest quality possible.</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://t.me/PintrestDownloadsBot" class="hover:text-accent transition-colors">Try Bot</a></li>
+                        <li><a href="https://t.me/+qmQRKWhcIM81NjQ1" class="hover:text-accent transition-colors">Support</a></li>
+                        <li><a href="https://t.me/RektDevelopers" class="hover:text-accent transition-colors">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-right">
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex justify-center md:justify-end space-x-6">
+                        <a href="https://t.me/PintrestDownloadsBot" class="hover:text-accent transition-colors">
+                            <i class="fab fa-telegram fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/sh33ikh/PintrestDownloadsBot" class="hover:text-accent transition-colors">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p>Made with <i class="fas fa-heart text-primary"></i> by <a href="https://t.me/RektDevelopers" class="text-accent hover:text-highlight transition-colors">RektDevelopers</a></p>
+                <p class="mt-2 text-sm text-gray-400">&copy; 2024 Pinterest Downloads Bot. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Ad and Analytics Scripts -->
-    <script type="text/javascript" src="https://www.profitablecpmrate.com/mag77ksi?key=86a10f2f777bc46abe54b0c3288b2e10" async></script> <!-- Added async attribute -->
-    <script type="text/javascript" src="//pl25457981.profitablecpmrate.com/07/12/70/07127081935f2e2523daf7376c624602.js" defer></script> <!-- Added defer attribute -->
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pinterest Downloads Bot",
+        "url": "https://pintrest-downloads-bot.vercel.app/",
+        "description": "Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot or web interface.",
+        "applicationCategory": "DownloadApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1000"
+        }
+    }
+    </script>
 
     <!-- Main Script -->
-    <!-- Download Handler Script -->
-    <script type='text/javascript' src='//pl25457981.profitablecpmrate.com/07/12/70/07127081935f2e2523daf7376c624602.js' defer></script> <!-- Added defer attribute -->
-    <script>
+    <script defer>
         async function handleDownload() {
             const urlInput = document.getElementById('pinterest-url');
             const resultDiv = document.getElementById('download-result');
             const spinner = document.getElementById('loading-spinner');
             
-            // Validate URL
             if (!urlInput.value.includes('pinterest.com') && !urlInput.value.includes('pin.it')) {
-                resultDiv.innerHTML = '<p class="text-red-500">Please enter a valid Pinterest URL</p>';
+                resultDiv.innerHTML = '<div class="bg-red-50 border border-red-200 rounded-lg p-4"><p class="text-red-700">Please enter a valid Pinterest URL</p></div>';
                 resultDiv.classList.remove('hidden');
                 return;
             }
 
-            // Show loading
             spinner.style.display = 'block';
             resultDiv.classList.add('hidden');
 
@@ -121,7 +230,7 @@
                     resultDiv.innerHTML = `
                         <div class="bg-green-50 border border-green-200 rounded-lg p-4">
                             <h4 class="font-bold text-green-700 mb-2">Download Ready!</h4>
-                            <a href="${data.downloadUrl}" class="bg-green-500 text-white px-4 py-2 rounded inline-block hover:bg-green-600 transition">
+                            <a href="${data.downloadUrl}" class="bg-green-500 text-white px-6 py-2 rounded-full inline-block hover:bg-green-600 transition-colors">
                                 Download Now
                             </a>
                         </div>
@@ -151,41 +260,6 @@
                 handleDownload();
             }
         });
-
-        // Check if page is accessed from specific URLs
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const source = urlParams.get('source');
-            if (source === 'vercel' || source === 'github') {
-                document.getElementById('pinterest-url').value = urlParams.get('pinterestUrl') || '';
-                if (urlParams.get('autoDownload') === 'true') {
-                    handleDownload();
-                }
-            }
-        };
-    </script>
-
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Pinterest Downloads Bot",
-        "url": "https://pintrest-downloads-bot.vercel.app/",
-        "description": "Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot or web interface.",
-        "applicationCategory": "DownloadApplication",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "1000"
-        }
-    }
     </script>
 </body>
 </html>
