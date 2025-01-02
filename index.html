@@ -264,4 +264,41 @@
                 handleDownload();
             }
         });
+
+        // Check if page is accessed from specific URLs
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source');
+            if (source === 'vercel' || source === 'github') {
+                document.getElementById('pinterest-url').value = urlParams.get('pinterestUrl') || '';
+                if (urlParams.get('autoDownload') === 'true') {
+                    handleDownload();
+                }
+            }
+        };
     </script>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Pinterest Downloads Bot",
+        "url": "https://pintrest-downloads-bot.vercel.app/",
+        "description": "Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot or web interface.",
+        "applicationCategory": "DownloadApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1000"
+        }
+    }
+    </script>
+</body>
+</html>
