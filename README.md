@@ -1,15 +1,15 @@
 # 🚀 Pinterest Downloads Bot
 
 <div align="center">
+    <img src="assets/welcome.png" alt="Pinterest Downloads Bot" width="600">
 
-[![Live Bot](https://img.shields.io/badge/Live%20Bot-Telegram-blue?style=for-the-badge&logo=telegram)](https://t.me/PintrestDownloadsBot)
-[![Support](https://img.shields.io/badge/Support-Group-green?style=for-the-badge&logo=telegram)](https://t.me/+qmQRKWhcIM81NjQ1)
-[![Updates](https://img.shields.io/badge/Updates-Channel-blue?style=for-the-badge&logo=telegram)](https://t.me/RektDevelopers)
+    [![Live Bot](https://img.shields.io/badge/Live%20Bot-Telegram-blue?style=for-the-badge&logo=telegram)](https://t.me/PintrestDownloadsBot)
+    [![Support](https://img.shields.io/badge/Support-Group-green?style=for-the-badge&logo=telegram)](https://t.me/+qmQRKWhcIM81NjQ1)
+    [![Updates](https://img.shields.io/badge/Updates-Channel-blue?style=for-the-badge&logo=telegram)](https://t.me/RektDevelopers)
 
-A powerful Telegram bot for downloading high-quality Pinterest videos and images.
+    A powerful Telegram bot for downloading high-quality Pinterest videos and images.
 
-[Try the Bot](https://t.me/PintrestDownloadsBot) • [Join Support](https://t.me/+qmQRKWhcIM81NjQ1) • [Updates Channel](https://t.me/RektDevelopers)
-
+    [Try the Bot](https://t.me/PintrestDownloadsBot) • [Join Support](https://t.me/+qmQRKWhcIM81NjQ1) • [Updates Channel](https://t.me/RektDevelopers)
 </div>
 
 ## ✨ Features
@@ -33,26 +33,26 @@ A powerful Telegram bot for downloading high-quality Pinterest videos and images
 ## 🚀 Quick Start
 
 1. Clone the repository:
-```bash
-git clone https://github.com/sh33ikh/PintrestDownloadsBot.git
-cd PintrestDownloadsBot
-```
+    ```bash
+    git clone https://github.com/sh33ikh/PintrestDownloadsBot.git
+    cd PintrestDownloadsBot
+    ```
 
 2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 3. Configure environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-```
+    ```bash
+    cp .env.example .env
+    # Edit .env with your credentials
+    ```
 
 4. Run the bot:
-```bash
-python main.py
-```
+    ```bash
+    python main.py
+    ```
 
 ## 🐳 Docker Support
 
@@ -63,15 +63,15 @@ docker run -d --env-file .env pinterest-bot
 
 ## 📝 Environment Variables
 
-| Variable | Description |
-|----------|-------------|
-| BOT_TOKEN | Your Telegram Bot Token |
-| REQUIRED_CHANNEL | Channel ID for Force Subscribe |
-| RAPIDAPI_KEY | Your RapidAPI Key |
-| CHANNEL_USERNAME | Updates Channel Username |
-| SUPPORT_GROUP | Support Group Link |
+| Variable         | Description                   |
+|------------------|-------------------------------|
+| BOT_TOKEN        | Your Telegram Bot Token       |
+| REQUIRED_CHANNEL | Channel ID for Force Subscribe|
+| RAPIDAPI_KEY     | Your RapidAPI Key             |
+| CHANNEL_USERNAME | Updates Channel Username      |
+| SUPPORT_GROUP    | Support Group Link            |
 
-## 👥 Contributing
+## 📤 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -86,6 +86,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💬 Support
 
 Join our [Support Group](https://t.me/+qmQRKWhcIM81NjQ1) for help and updates.
+
+## ☕ Buy Me a Coffee
+
+If you find this project useful, consider buying me a coffee to support my work:
+- **ETH Address**: `0x6dD47369f097569bA3A61733FCD1D5CF0a5FDD30`
 
 ## 🌟 Credits
 
