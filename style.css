@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #E60023;
+    --secondary-color: #111827;
+    --accent-color: #0088cc;
+    --highlight-color: #ff5722;
+    --background-color: #f5f7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    line-height: 1.6;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png') center center/cover;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-5px);
+}
+
+.loading {
+    display: none;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.feature {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #111827;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #0088cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff5722;
+}
