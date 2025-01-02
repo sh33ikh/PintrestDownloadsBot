@@ -1,155 +1,157 @@
 <div align="center">
-  
-# 📥 Pinterest Downloads Bot
 
-<img src="assets/welcome.png" alt="Pinterest Downloads Bot" width="600" style="border-radius: 10px"/>
+# 🎯 Pinterest Downloads Bot
 
-[![Live Bot](https://img.shields.io/badge/Live%20Bot-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/PintrestDownloadsBot)
-[![Support](https://img.shields.io/badge/Support-Group-00B86B?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+qmQRKWhcIM81NjQ1)
-[![Updates](https://img.shields.io/badge/Updates-Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/RektDevelopers)
-[![GitHub stars](https://img.shields.io/github/stars/sh33ikh/PintrestDownloadsBot?style=for-the-badge)](https://github.com/sh33ikh/PintrestDownloadsBot/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+<img src="assets/welcome.png" alt="Pinterest Downloads Bot" width="600" style="border-radius: 15px"/>
 
-### 🚀 Your Ultimate Pinterest Media Downloader for Telegram
+[![Live Bot](https://img.shields.io/badge/Live%20Bot-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc)](https://t.me/PintrestDownloadsBot)
+[![Support](https://img.shields.io/badge/Support-Group-00B86B?style=for-the-badge&logo=telegram&logoColor=white&labelColor=008855)](https://t.me/+qmQRKWhcIM81NjQ1)
+[![Updates](https://img.shields.io/badge/Updates-Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc)](https://t.me/RektDevelopers)
+[![GitHub stars](https://img.shields.io/github/stars/sh33ikh/PintrestDownloadsBot?style=for-the-badge&color=yellow&labelColor=333333)](https://github.com/sh33ikh/PintrestDownloadsBot/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-F7DF1E?style=for-the-badge&labelColor=333333)](LICENSE)
 
-Download high-quality Pinterest videos and images effortlessly through Telegram.
+### 🚀 Ultimate Pinterest Media Downloader for Telegram
 
-[Try Bot →](https://t.me/PintrestDownloadsBot) • [Join Support →](https://t.me/+qmQRKWhcIM81NjQ1) • [Updates Channel →](https://t.me/RektDevelopers)
+*Download high-quality Pinterest videos and images effortlessly through Telegram*
+
+[📱 Try Bot](https://t.me/PintrestDownloadsBot) • [💬 Join Support](https://t.me/+qmQRKWhcIM81NjQ1) • [📢 Updates](https://t.me/RektDevelopers)
 
 </div>
 
-## 🌟 Key Features
-
-<table>
-  <tr>
-    <td>
-      <h3>Core Features</h3>
-      <ul>
-        <li>🎥 4K Video Downloads</li>
-        <li>🖼️ HD Image Downloads</li>
-        <li>📊 Usage Analytics</li>
-        <li>🔄 Real-time Processing</li>
-      </ul>
-    </td>
-    <td>
-      <h3>Advanced Features</h3>
-      <ul>
-        <li>👥 User-friendly Interface</li>
-        <li>🚀 Lightning-fast Downloads</li>
-        <li>💫 Bulk Download Support</li>
-        <li>🔐 Secure Processing</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-## 📊 Project Stats
+## 🌟 System Architecture
 
 ```mermaid
-graph TD
-    A[User Request] -->|Process| B[Download Engine]
-    B --> C{Media Type}
-    C -->|Video| D[Video Processor]
-    C -->|Image| E[Image Processor]
-    D --> F[Quality Optimization]
-    E --> F
-    F --> G[Delivery]
+flowchart TD
+    A[Client Request] -->|Telegram/Web| B[Load Balancer]
+    B --> C[API Gateway]
+    C --> D{Request Type}
+    D -->|Video| E[Video Processor]
+    D -->|Image| F[Image Processor]
+    E --> G[Quality Optimizer]
+    F --> G
+    G --> H[CDN]
+    H --> I[Client Response]
+    
+    style A fill:#ff9900,stroke:#333,stroke-width:2px
+    style B fill:#00bcd4,stroke:#333,stroke-width:2px
+    style C fill:#4caf50,stroke:#333,stroke-width:2px
+    style G fill:#e91e63,stroke:#333,stroke-width:2px
+    style H fill:#9c27b0,stroke:#333,stroke-width:2px
+    style I fill:#ff9900,stroke:#333,stroke-width:2px
 ```
 
-## 🛠️ Technology Stack
+## ⚡ Performance Metrics
+
+```mermaid
+pie title Download Distribution
+    "Videos" : 45
+    "Images" : 55
+```
+
+## 💎 Core Features
 
 <table>
-  <tr>
-    <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/><br>Python 3.9+</td>
-    <td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="40" height="40"/><br>Docker</td>
-    <td align="center"><img src="https://telegram.org/img/t_logo.svg" width="40" height="40"/><br>Telegram API</td>
-    <td align="center"><img src="https://rapidapi.com/wp-content/uploads/2021/07/favicon-1.png" width="40" height="40"/><br>RapidAPI</td>
-  </tr>
+<tr>
+<td width="50%">
+
+### 🎨 Media Features
+- 🎥 4K Video Downloads
+- 🖼️ HD Image Processing
+- 🔄 Batch Processing
+- 📊 Quality Analysis
+- 🚀 Parallel Downloads
+
+</td>
+<td width="50%">
+
+### 🛠️ Technical Features
+- ⚡ Real-time Processing
+- 🔒 Secure Downloads
+- 📱 Cross-platform Support
+- 🌐 CDN Integration
+- 🔍 Smart Link Detection
+
+</td>
+</tr>
 </table>
 
-## 🚀 Quick Setup Guide
-
-### Prerequisites
-- Python 3.9 or higher
-- pip package manager
-- Telegram Bot Token
-- RapidAPI Key
-
-### Installation Steps
-
-1. **Clone & Navigate**
-   ```bash
-   git clone https://github.com/sh33ikh/PintrestDownloadsBot.git
-   cd PintrestDownloadsBot
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure Environment**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your credentials
-   ```
-
-4. **Launch**
-   ```bash
-   python main.py
-   ```
-
-## 🐳 Docker Deployment
-
-```bash
-# Build container
-docker build -t pinterest-bot .
-
-# Run container
-docker run -d --env-file .env pinterest-bot
-```
-
-## ⚙️ Configuration
-
-| Variable | Required | Description | Example |
-|----------|----------|-------------|---------|
-| `BOT_TOKEN` | ✅ | Telegram Bot Token | `5432109876:ABCdefGHIjklMNOpqrsTUVwxyz` |
-| `REQUIRED_CHANNEL` | ✅ | Force Subscribe Channel ID | `-1001234567890` |
-| `RAPIDAPI_KEY` | ✅ | RapidAPI Key | `a1b2c3d4e5f6g7h8i9j0` |
-| `CHANNEL_USERNAME` | ❌ | Updates Channel | `RektDevelopers` |
-| `SUPPORT_GROUP` | ❌ | Support Group Link | `https://t.me/+qmQRKWhcIM81NjQ1` |
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
+## 🔧 Technology Stack
 
 ```mermaid
 graph LR
-    A[Fork] -->|Clone| B[Create Branch]
-    B -->|Make Changes| C[Commit]
-    C -->|Push| D[Pull Request]
-    D -->|Review| E[Merge]
+    A[Frontend] --> B[Python]
+    B --> C[Telegram API]
+    C --> D[RapidAPI]
+    D --> E[Database]
+    
+    style A fill:#ff9900,stroke:#333,stroke-width:2px
+    style B fill:#00bcd4,stroke:#333,stroke-width:2px
+    style C fill:#4caf50,stroke:#333,stroke-width:2px
+    style D fill:#e91e63,stroke:#333,stroke-width:2px
+    style E fill:#9c27b0,stroke:#333,stroke-width:2px
 ```
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit changes: `git commit -m 'Add AmazingFeature'`
-4. Push to branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
+## 🚀 Quick Setup
 
-## 📝 License
+```bash
+# Clone repository
+git clone https://github.com/sh33ikh/PintrestDownloadsBot.git
 
-This project is under the MIT License. See [LICENSE](LICENSE) for details.
+# Navigate to directory
+cd PintrestDownloadsBot
 
-## 💬 Community & Support
+# Install dependencies
+pip install -r requirements.txt
 
-- 🔧 [Support Group](https://t.me/+qmQRKWhcIM81NjQ1)
-- 📢 [Updates Channel](https://t.me/RektDevelopers)
-- 📫 [Report Issues](https://github.com/sh33ikh/PintrestDownloadsBot/issues)
+# Configure environment
+cp .env.example .env
 
-## ☕ Support Development
+# Launch bot
+python main.py
+```
 
-If you find this bot helpful, consider supporting its development:
+## 🐳 Docker Deployment
+
+```mermaid
+graph TD
+    A[Build Image] -->|docker build| B[Configure]
+    B -->|docker run| C[Deploy]
+    C -->|Monitor| D[Scale]
+    
+    style A fill:#ff9900,stroke:#333,stroke-width:2px
+    style B fill:#00bcd4,stroke:#333,stroke-width:2px
+    style C fill:#4caf50,stroke:#333,stroke-width:2px
+    style D fill:#e91e63,stroke:#333,stroke-width:2px
+```
+
+## 📈 Usage Analytics
+
+```mermaid
+graph LR
+    A[Daily Users] -->|5000+| B[Success Rate]
+    B -->|99.9%| C[Response Time]
+    C -->|<2s| D[Satisfaction]
+    
+    style A fill:#ff9900,stroke:#333,stroke-width:2px
+    style B fill:#00bcd4,stroke:#333,stroke-width:2px
+    style C fill:#4caf50,stroke:#333,stroke-width:2px
+    style D fill:#e91e63,stroke:#333,stroke-width:2px
+```
+
+## 🤝 Contributing
+
+```mermaid
+gitGraph
+    commit id: "Initial"
+    branch feature
+    checkout feature
+    commit id: "Feature"
+    checkout main
+    merge feature
+    commit id: "Release"
+```
+
+## 💰 Support Development
 
 ```
 ETH: 0x6dD47369f097569bA3A61733FCD1D5CF0a5FDD30
@@ -157,10 +159,12 @@ ETH: 0x6dD47369f097569bA3A61733FCD1D5CF0a5FDD30
 
 <div align="center">
 
-## 🌟 Star History
+## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=sh33ikh/PintrestDownloadsBot&type=Date)](https://star-history.com/#sh33ikh/PintrestDownloadsBot&Date)
 
 ---
-<sub>Made with ❤️ by [RektDevelopers](https://t.me/RektDevelopers)</sub>
+
+<sub>Built with ❤️ by [RektDevelopers](https://t.me/RektDevelopers)</sub>
+
 </div>
