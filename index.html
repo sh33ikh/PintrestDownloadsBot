@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Pinterest Downloads Bot - High Quality Pinterest Media Downloader</title>
+    <meta name="title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
+    <meta name="description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads using our Telegram bot or web interface.">
+    <meta name="keywords" content="Pinterest downloader, Pinterest video downloader, Pinterest image downloader, Pinterest save, Pinterest HD download, Telegram bot">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pintrest-downloads-bot.vercel.app/">
+    <meta property="og:title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
+    <meta property="og:description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pintrest-downloads-bot.vercel.app/">
+    <meta name="twitter:title" content="Pinterest Downloads Bot - #1 Pinterest Media Downloader">
+    <meta name="twitter:description" content="Download Pinterest videos and images in HD quality instantly. Free, fast, and secure downloads.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary-color: #E60023;
+            --secondary-color: #111827;
+            --accent-color: #0088cc;
+        }
+        
+        .loading {
+            display: none;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+    
+    <!-- Deferred CSS Loading -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="assets/favicon.png" alt="Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold gradient-text">Pinterest Bot</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://t.me/PintrestDownloadsBot" 
+                       class="bg-[#0088cc] text-white px-4 py-2 rounded-lg hover:bg-[#0077b5] transition">
+                        <i class="fab fa-telegram-plane mr-2"></i>Try Bot
+                    </a>
+                    <a href="https://t.me/+qmQRKWhcIM81NjQ1" 
+                       class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                        <i class="fas fa-headset mr-2"></i>Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Download Pinterest Media <span class="gradient-text">Instantly</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">High quality Pinterest video and image downloader - Free & Fast</p>
+            <img src="https://raw.githubusercontent.com/sh33ikh/PintrestDownloadsBot/main/assets/welcome.png" 
+                 alt="Pinterest Downloads Bot Welcome" 
+                 class="hero-image mx-auto mb-8">
+            
+            <!-- Download Form -->
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl p-6 mb-12">
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                    <input type="url" 
+                           id="pinterest-url" 
+                           placeholder="Paste Pinterest URL here" 
+                           class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#E60023]">
+                    <button onclick="handleDownload()" 
+                            class="bg-[#E60023] text-white px-8 py-3 rounded-lg hover:bg-[#ad021b] transition flex items-center justify-center">
+                        <span>Download</span>
+                        <div class="loading ml-2" id="loading-spinner"></div>
+                    </button>
+                </div>
+                <div id="download-result" class="mt-4 hidden">
+                    <!-- Download results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4 text-[#E60023]">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">HD Video Downloads</h3>
+                <p class="text-gray-600">Download Pinterest videos in highest quality available</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4 text-[#E60023]">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Image Downloads</h3>
+                <p class="text-gray-600">Save Pinterest images in original resolution</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <div class="text-4xl mb-4 text-[#E60023]">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Fast Processing</h3>
+                <p class="text-gray-600">Lightning-fast downloads with our optimized servers</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <span class="text-4xl font-bold gradient-text">10K+</span>
+                    <p class="text-gray-600">Active Users</p>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold gradient-text">100K+</span>
+                    <p class="text-gray-600">Downloads</p>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold gradient-text">4.9/5</span>
+                    <p class="text-gray-600">User Rating</p>
+                </div>
+                <div>
+                    <span class="text-4xl font-bold gradient-text">24/7</span>
+                    <p class="text-gray-600">Support</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-lg mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p class="text-gray-600 mb-4">
+                    Made with <i class="fas fa-heart text-[#E60023]"></i> by 
+                    <a href="https://t.me/RektDevelopers" class="text-blue-500 hover:text-blue-600">RektDevelopers</a>
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://t.me/PintrestDownloadsBot" class="text-[#0088cc] hover:text-[#0077b5]">
+                        <i class="fab fa-telegram fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/sh33ikh/PintrestDownloadsBot" class="text-gray-800 hover:text-gray-600">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://t.me/RektDevelopers" class="text-[#0088cc] hover:text-[#0077b5]">
+                        <i class="fas fa-broadcast-tower fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Handler Script -->
+    <script>
+        async function handleDownload() {
+            const urlInput = document.getElementById('pinterest-url');
+            const resultDiv = document.getElementById('download-result');
+            const spinner = document.getElementById('loading-spinner');
+            
+            // Validate URL
+            if (!urlInput.value.includes('pinterest.com') && !urlInput.value.includes('pin.it')) {
+                resultDiv.innerHTML = '<p class="text-red-500">Please enter a valid Pinterest URL</p>';
+                resultDiv.classList.remove('hidden');
+                return;
+            }
+
+            // Show loading
+            spinner.style.display = 'block';
+            resultDiv.classList.add('hidden');
+
+            try {
+                const response = await fetch('/.netlify/functions/download', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: urlInput.value })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                            <h4 class="font-bold text-green-700 mb-2">Download Ready!</h4>
+                            <a href="${data.downloadUrl}" 
+                               class="bg-green-500 text-white px-4 py-2 rounded inline-block hover:bg-green-600 transition">
+                                Download Now
+                            </a>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <p class="text-red-700">${data.error || 'Failed to process URL. Please try again.'}</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <p class="text-red-700">An error occurred. Please try again later.</p>
+                    </div>
+                `;
+            } finally {
+                spinner.style.display = 'none';
+                resultDiv.classList.remove('hidden');
+            }
+        }
+
+        // Handle Enter key press
+        document.getElementById('pinterest-url').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleDownload();
+            }
+        });
+    </script>
